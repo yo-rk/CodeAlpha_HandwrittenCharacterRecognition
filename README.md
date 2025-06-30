@@ -13,7 +13,9 @@
 ---
 
 ## 🗂 Dataset:
+EMNIST Dataset — downloaded automatically via code during training  
 [EMNIST Dataset](https://www.nist.gov/itl/products-and-services/emnist-dataset)
+
 
 ---
 
