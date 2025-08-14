@@ -16,7 +16,11 @@
 - **MNIST** Handwritten Digits dataset  
 - 60,000 training images and 10,000 testing images  
 - Images are grayscale, 28×28 pixels.
-EMNIST Dataset — downloaded automatically via code during training  
+  
+EMNIST Dataset — downloaded automatically via code during training
+from tensorflow.keras.datasets import mnist
+(X_train, y_train), (X_test, y_test) = mnist.load_data()
+
 [EMNIST Dataset](https://www.nist.gov/itl/products-and-services/emnist-dataset)
 
 
@@ -39,6 +43,17 @@ EMNIST Dataset — downloaded automatically via code during training
 - Python
 - TensorFlow / Keras
 - NumPy, Matplotlib, Seaborn
+
+
+---
+
+
+📈 Results
+Test Accuracy: ~99%
+
+Sample Predictions:
+![Prediction Example 1](Result1.png)  
+![Prediction Example 2](Result2.png)  
 
 ---
 
