@@ -1,60 +1,57 @@
-# CodeAlpha Handwritten Character Recognition
+# Handwritten Digit Recognition (CNN)
 
-✍️ This project is part of my CodeAlpha Machine Learning Internship, where I built a system to recognize handwritten characters using Convolutional Neural Networks (CNNs) and the EMNIST dataset.
-
----
-
-## 📊 Project Highlights:
-- Recognized handwritten alphabets with CNNs
-- Trained and evaluated on EMNIST dataset
-- Visualized predictions and model performance
-- Achieved high accuracy in character classification
+This project implements a Convolutional Neural Network (CNN) to classify handwritten digits (0–9) using the MNIST dataset.
 
 ---
 
-## 🗂 Dataset:
-- **MNIST** Handwritten Digits dataset  
+## 📊 Project Highlights
+- Built a CNN model for image classification
+- Applied normalization and preprocessing for better training
+- Used dropout to reduce overfitting
+- Visualized model performance and predictions
+- Achieved **99.04% test accuracy**
+
+---
+
+## 🗂 Dataset
+- MNIST Handwritten Digits dataset  
 - 60,000 training images and 10,000 testing images  
-- Images are grayscale, 28×28 pixels.
-  
-EMNIST Dataset — downloaded automatically via code during training
+- Grayscale images of size 28×28 pixels  
+
+Dataset loaded using TensorFlow:
+```python
 from tensorflow.keras.datasets import mnist
 (X_train, y_train), (X_test, y_test) = mnist.load_data()
-
-[EMNIST Dataset](https://www.nist.gov/itl/products-and-services/emnist-dataset)
-
+```
 
 ---
 
 ## 🧠 Model Architecture
-| Layer (type)   | Output Shape  | Parameters |
-|---------------|--------------|------------|
-| Conv2D        | (26, 26, 32) | 320        |
-| MaxPooling2D  | (13, 13, 32) | 0          |
-| Flatten       | (5408)       | 0          |
-| Dense (128)   | (128)        | 692,352    |
-| Dense (10)    | (10)         | 1,290      |
-
-**Total Parameters:** 693,962
+- Conv2D → ReLU → MaxPooling  
+- Conv2D → ReLU → MaxPooling  
+- Flatten  
+- Dense (128)  
+- Dropout (0.5)  
+- Dense (10, Softmax)  
 
 ---
 
-## 🛠 Technologies:
+## 🛠 Technologies Used
 - Python
 - TensorFlow / Keras
-- NumPy, Matplotlib, Seaborn
+- NumPy, Matplotlib
 
+---
+
+## 📈 Results
+- Test Accuracy: 99.04%
+- Sample Predictions
 
 ---
 
 
-📈 Results
-Test Accuracy: ~99%
+## 💡 Key Learning
 
-Sample Predictions:
-![Prediction Example 1](Result1.png)  
-![Prediction Example 2](Result2.png)  
+Learned how CNNs extract spatial features from images and how regularization techniques like dropout improve model generalization.
 
----
-
-*Project submitted for CodeAlpha Machine Learning Internship*
+Project completed as part of CodeAlpha Machine Learning Internship
